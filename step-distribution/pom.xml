@@ -29,7 +29,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Exense projects -->
 		<step-backend.version>2022.03.17-ID0273c73e</step-backend.version>
-		<step-frontend.version>2022.03.17-ID9405812</step-frontend.version>
+		<step-frontend.version>2022.03.17-IDf1aaa69</step-frontend.version>
 		<rtm.version>2.3.3</rtm.version>
 	</properties>
 
