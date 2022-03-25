@@ -69,6 +69,7 @@
 				<executions>
 					<execution>
 						<id>enforce-file-size</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>enforce</goal>
 						</goals>

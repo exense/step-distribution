@@ -70,6 +70,8 @@
 							<outputDirectory>${project.basedir}/template-controller/ext/groovy</outputDirectory>
 						</artifactItem>
 					</artifactItems>
+					<overWriteReleases>true</overWriteReleases>
+					<overWriteSnapshots>true</overWriteSnapshots>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -100,6 +102,7 @@
 				<executions>
 					<execution>
 						<id>enforce-file-size</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>enforce</goal>
 						</goals>
