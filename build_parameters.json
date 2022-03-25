@@ -7,7 +7,7 @@
 		{
 			"ACTION": "COMPILE",
 			"TYPE": "POM",
-			"FOLDER": "step-distribution/",
+			"FOLDER": "step-distribution/step-distribution-parent/",
 			"PARAMETERS": [
 				{
 					"NAME": "DEVELOPMENT",
@@ -28,15 +28,15 @@
 					"TYPE": "GITHUB",
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step-controller-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step-agent-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution/step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step-ide-${VERSION}.zip"
 						}
 					]
@@ -45,15 +45,15 @@
 					"TYPE": "FTP",
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-controller-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-agent-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution/step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-ide-${VERSION}.zip"
 						}
 					]
@@ -73,12 +73,12 @@
 					],
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step:k8s-step-controller-${VERSION}-java-11",
 							"CONFIG": "controller-dockerfile"
 						},
 						{
-							"ORIGIN": "step-distribution/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution/step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step:k8s-step-agent-${VERSION}-java-11",
 							"CONFIG": "agent-dockerfile"
 						}
