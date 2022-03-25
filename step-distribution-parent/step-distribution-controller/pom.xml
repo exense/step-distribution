@@ -49,14 +49,6 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>3.0.0-M2</version>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<version>3.3.0</version>
 				<executions>
@@ -78,9 +70,6 @@
 							<outputDirectory>${project.basedir}/template-controller/ext/groovy</outputDirectory>
 						</artifactItem>
 					</artifactItems>
-					<outputDirectory>${project.build.directory}/wars</outputDirectory>
-					<overWriteReleases>true</overWriteReleases>
-					<overWriteSnapshots>true</overWriteSnapshots>
 				</configuration>
 			</plugin>
 			<plugin>
