@@ -93,6 +93,31 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>enforce-file-size</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireFilesSize>
+									<maxsize>225000000</maxsize>
+									<minsize>215000000</minsize>
+									<files>
+										<file>${project.build.directory}/step-controller-${project.version}.zip</file>
+									</files>
+								</requireFilesSize>
+							</rules>
+							<fail>true</fail>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
