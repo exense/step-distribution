@@ -30,9 +30,9 @@
 	<dependencySets>
 		<dependencySet>
 			<useTransitiveFiltering>true</useTransitiveFiltering>
-			<includes>
-				<include>ch.exense.step:step-agent</include>
-			</includes>
+			<excludes>
+				<exclude>junit:junit</exclude>
+			</excludes>
 			<outputDirectory>lib</outputDirectory>
 		</dependencySet>
 	</dependencySets>
