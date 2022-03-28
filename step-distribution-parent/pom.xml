@@ -57,7 +57,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Exense projects -->
-		<step-backend.version>2022.03.28-IDdff37a72</step-backend.version>
+		<step-backend.version>2022.03.28-ID3b5b31c8</step-backend.version>
 		<step-frontend.version>2022.03.28-ID1b40fc2</step-frontend.version>
 		<rtm.version>2.3.3</rtm.version>
 	</properties>
