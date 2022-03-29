@@ -74,13 +74,13 @@
 					"ACTIONS": [
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION": "step:k8s-step-controller-${VERSION}-java-11",
+							"DESTINATION": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-dockerfile"
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION": "step:k8s-step-agent-${VERSION}-java-11",
-							"CONFIG": "agent-dockerfile"
+							"DESTINATION": "step/agent:${VERSION}-java-11",
+							"CONFIG": "agent-new-dockerfile"
 						}
 					]
 				}
