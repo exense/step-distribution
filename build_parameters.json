@@ -86,5 +86,6 @@
 				}
 			]
 		}
-	]
+	],
+	"AFTER": "stepos-redeploy-test"
 }
