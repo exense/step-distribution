@@ -10,7 +10,7 @@
 			"FOLDER": "step-distribution-parent/",
 			"PARAMETERS": [
 				{
-					"NAME": "DEVELOPMENT",
+					"NAME": "ALL",
 					"URL": "nexus-staging::https://nexus-enterprise.exense.ch/repository/staging-maven/",
 					"CONFIG": "DefaultBuild"
 				},
@@ -63,7 +63,7 @@
 					"OS": "LINUX",
 					"PARAMETERS": [
 						{
-							"NAME": "DEVELOPMENT",
+							"NAME": "ALL",
 							"URL": "docker-dev.exense.ch"
 						},
 						{
