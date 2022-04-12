@@ -110,7 +110,7 @@
 							<rules>
 								<requireFilesSize>
 									<maxsize>225000000</maxsize>
-									<minsize>215000000</minsize>
+									<minsize>120000000</minsize>
 									<files>
 										<file>${project.build.directory}/step-controller-${project.version}.zip</file>
 									</files>
