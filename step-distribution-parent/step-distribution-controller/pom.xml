@@ -39,7 +39,7 @@
 		</dependency>
 		<dependency>
 			<groupId>ch.exense.step.frontend</groupId>
-			<artifactId>step-frontend-oss</artifactId>
+			<artifactId>step-app</artifactId>
 			<version>${step-frontend.version}</version>
 			<type>jar</type>
 		</dependency>
