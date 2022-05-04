@@ -65,7 +65,7 @@
 						<artifactItem>
 							<groupId>org.codehaus.groovy</groupId>
 							<artifactId>groovy-all</artifactId>
-							<version>2.4.16</version>
+							<version>${groovy.version}</version>
 							<overWrite>true</overWrite>
 							<outputDirectory>${project.basedir}/template-controller/ext/groovy</outputDirectory>
 						</artifactItem>
