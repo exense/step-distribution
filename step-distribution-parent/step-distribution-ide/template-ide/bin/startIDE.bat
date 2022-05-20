@@ -28,4 +28,4 @@ SET JAVA_OPTS=%JAVA_OPTS% -Dlogback.configurationFile=./logback.xml
 
 SET LIB_PATH=..\lib
 
-"%JAVA_PATH%java.exe" %JAVA_OPTS% -cp "%LIB_PATH%\*;" step.controller.ControllerServer -config=..\conf\step-ide.properties
+"%JAVA_PATH%java.exe" %JAVA_OPTS% -cp "%LIB_PATH%\*;" step.framework.server.ControllerServer -config=..\conf\step-ide.properties

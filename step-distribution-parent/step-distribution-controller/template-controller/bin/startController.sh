@@ -24,4 +24,4 @@ JAVA_OPTS="${JAVA_OPTS} -Dlogback.configurationFile=./logback.xml -Dhttp.keepAli
 
 LIB_PATH=../lib
 
-${JAVA_PATH}java ${JAVA_OPTS} -cp "${LIB_PATH}/*:" step.controller.ControllerServer -config=../conf/step.properties
+${JAVA_PATH}java ${JAVA_OPTS} -cp "${LIB_PATH}/*:" step.framework.server.ControllerServer -config=../conf/step.properties
