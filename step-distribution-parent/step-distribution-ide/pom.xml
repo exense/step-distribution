@@ -49,6 +49,33 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactItems>
+						<artifactItem>
+							<groupId>org.codehaus.groovy</groupId>
+							<artifactId>groovy-all</artifactId>
+							<version>2.4.16</version>
+							<overWrite>true</overWrite>
+							<outputDirectory>${project.basedir}/template-ide/ext/groovy</outputDirectory>
+						</artifactItem>
+					</artifactItems>
+					<overWriteReleases>true</overWriteReleases>
+					<overWriteSnapshots>true</overWriteSnapshots>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.3.0</version>
 				<executions>
