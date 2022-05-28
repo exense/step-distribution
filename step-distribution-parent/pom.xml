@@ -59,7 +59,6 @@
 		<!-- Exense projects -->
 		<step-backend.version>0.0.0</step-backend.version>
 		<step-frontend.version>0.0.0</step-frontend.version>
-		<rtm.version>2.3.3</rtm.version>
 	</properties>
 	
 	<modules>
