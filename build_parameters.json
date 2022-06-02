@@ -82,6 +82,16 @@
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-new-dockerfile"
+						},
+												{
+							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"DESTINATION": "step/controller:${VERSION}-java-17",
+							"CONFIG": "controller-17-dockerfile"
+						},
+						{
+							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"DESTINATION": "step/agent:${VERSION}-java-17",
+							"CONFIG": "agent-17-dockerfile"
 						}
 					]
 				}
