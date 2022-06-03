@@ -59,10 +59,12 @@
 		<!-- Exense projects -->
 		<step-backend.version>0.0.0</step-backend.version>
 		<step-frontend.version>0.0.0</step-frontend.version>
+		<groovy.version>3.0.10</groovy.version>
 	</properties>
 	
 	<modules>
 		<module>step-distribution-agent</module>
+		<module>step-distribution-groovy</module>
 		<module>step-distribution-controller</module>
 		<module>step-distribution-ide</module>
 	</modules>

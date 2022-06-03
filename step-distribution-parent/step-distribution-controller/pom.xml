@@ -63,9 +63,9 @@
 				<configuration>
 					<artifactItems>
 						<artifactItem>
-							<groupId>org.codehaus.groovy</groupId>
-							<artifactId>groovy-all</artifactId>
-							<version>2.4.16</version>
+							<groupId>ch.exense.step</groupId>
+							<artifactId>step-distribution-groovy</artifactId>
+							<version>${project.version}</version>
 							<overWrite>true</overWrite>
 							<outputDirectory>${project.basedir}/template-controller/ext/groovy</outputDirectory>
 						</artifactItem>

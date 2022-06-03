@@ -63,11 +63,18 @@
 				<configuration>
 					<artifactItems>
 						<artifactItem>
-							<groupId>org.codehaus.groovy</groupId>
-							<artifactId>groovy-all</artifactId>
-							<version>2.4.16</version>
+							<groupId>ch.exense.step</groupId>
+							<artifactId>step-distribution-groovy</artifactId>
+							<version>${project.version}</version>
 							<overWrite>true</overWrite>
 							<outputDirectory>${project.basedir}/template-ide/ext/groovy</outputDirectory>
+						</artifactItem>
+						<artifactItem>
+							<groupId>org.openjdk.nashorn</groupId>
+							<artifactId>nashorn-core</artifactId>
+							<version>15.4</version>
+							<overWrite>true</overWrite>
+							<outputDirectory>${project.basedir}/template-controller/ext/javascript</outputDirectory>
 						</artifactItem>
 					</artifactItems>
 					<overWriteReleases>true</overWriteReleases>
@@ -109,8 +116,8 @@
 						<configuration>
 							<rules>
 								<requireFilesSize>
-									<maxsize>225000000</maxsize>
-									<minsize>120000000</minsize>
+									<maxsize>250000000</maxsize>
+									<minsize>200000000</minsize>
 									<files>
 										<file>${project.build.directory}/step-ide-${project.version}.zip</file>
 									</files>
