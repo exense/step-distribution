@@ -69,6 +69,13 @@
 							<overWrite>true</overWrite>
 							<outputDirectory>${project.basedir}/template-controller/ext/groovy</outputDirectory>
 						</artifactItem>
+						<artifactItem>
+							<groupId>org.openjdk.nashorn</groupId>
+							<artifactId>nashorn-core</artifactId>
+							<version>15.4</version>
+							<overWrite>true</overWrite>
+							<outputDirectory>${project.basedir}/template-controller/ext/javascript</outputDirectory>
+						</artifactItem>
 					</artifactItems>
 					<overWriteReleases>true</overWriteReleases>
 					<overWriteSnapshots>true</overWriteSnapshots>
