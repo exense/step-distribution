@@ -5,3 +5,4 @@
 rtm.war
 groovy-all-*.jar
 /groovy
+/template-ide/ext/*/*.jar

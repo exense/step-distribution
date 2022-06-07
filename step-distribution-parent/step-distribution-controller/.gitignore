@@ -4,4 +4,4 @@
 /step-controller-*-SNAPSHOT.zip
 rtm.war
 groovy-all-*.jar
-/groovy
+/template-controller/ext/*/*.jar

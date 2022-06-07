@@ -64,7 +64,8 @@
 	
 	<modules>
 		<module>step-distribution-agent</module>
-		<module>step-distribution-groovy</module>
+		<module>step-groovy-libraries</module>
+		<module>step-javascript-libraries</module>
 		<module>step-distribution-controller</module>
 		<module>step-distribution-ide</module>
 	</modules>

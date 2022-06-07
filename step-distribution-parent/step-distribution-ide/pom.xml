@@ -64,17 +64,17 @@
 					<artifactItems>
 						<artifactItem>
 							<groupId>ch.exense.step</groupId>
-							<artifactId>step-distribution-groovy</artifactId>
+							<artifactId>step-groovy-libraries</artifactId>
 							<version>${project.version}</version>
 							<overWrite>true</overWrite>
 							<outputDirectory>${project.basedir}/template-ide/ext/groovy</outputDirectory>
 						</artifactItem>
 						<artifactItem>
-							<groupId>org.openjdk.nashorn</groupId>
-							<artifactId>nashorn-core</artifactId>
-							<version>15.4</version>
+							<groupId>ch.exense.step</groupId>
+							<artifactId>step-javascript-libraries</artifactId>
+							<version>${project.version}</version>
 							<overWrite>true</overWrite>
-							<outputDirectory>${project.basedir}/template-controller/ext/javascript</outputDirectory>
+							<outputDirectory>${project.basedir}/template-ide/ext/javascript</outputDirectory>
 						</artifactItem>
 					</artifactItems>
 					<overWriteReleases>true</overWriteReleases>
