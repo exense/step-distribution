@@ -1,7 +1,6 @@
 {
 	"NAME": "Step OSS distribution",
 	"OS": "LINUX",
-	"LOCK": "STEP",
 
 	"ACTIONS": [
 		{
