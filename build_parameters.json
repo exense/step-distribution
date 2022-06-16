@@ -92,7 +92,7 @@
 			"PARAMETERS": [
 				{
 					"NAME": "DEVELOPMENT",
-					"INSTANCE":	"lst" ,
+					"INSTANCE":	"${BRANCH}" ,
 					"APPLICATION": "stepos",
 					"EDITION": "os",
 					"DOMAIN": "exense.ch",
