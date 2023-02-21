@@ -116,8 +116,7 @@
 					"EDITION": "os",
 					"DOMAIN": "exense.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
-					"PERSISTENCE": "false",
-					"TEST_DEPLOYMENT": "https://stepos-master.exense.ch/"
+					"PERSISTENCE": "false"
 				}
 			]
 		}
