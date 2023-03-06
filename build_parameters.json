@@ -105,7 +105,7 @@
 					"INSTANCE":	"${BRANCH}" ,
 					"APPLICATION": "stepos",
 					"EDITION": "os",
-					"DOMAIN": "exense.ch",
+					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
 					"PERSISTENCE": "false"
 				},
@@ -114,7 +114,7 @@
 					"INSTANCE":	"nhy" ,
 					"APPLICATION": "stepos",
 					"EDITION": "os",
-					"DOMAIN": "exense.ch",
+					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
 					"PERSISTENCE": "false"
 				}
