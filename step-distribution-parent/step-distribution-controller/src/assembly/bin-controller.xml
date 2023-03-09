@@ -32,6 +32,9 @@
 			<useTransitiveFiltering>true</useTransitiveFiltering>
 			<excludes>
 				<exclude>junit:junit</exclude>
+				<exclude>org.codehaus.groovy:groovy-test</exclude>
+				<exclude>org.codehaus.groovy:groovy-test-junit5</exclude>
+				<exclude>org.codehaus.groovy:groovy-testng</exclude>
 			</excludes>
 			<outputDirectory>lib</outputDirectory>
 		</dependencySet>
