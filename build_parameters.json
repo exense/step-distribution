@@ -107,7 +107,8 @@
 					"EDITION": "os",
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
-					"PERSISTENCE": "false"
+					"PERSISTENCE": "false",
+					"CHART_VERSION": "0.0.10-SNAPSHOT"
 				},
 				{
 					"NAME": "INTEGRATION",
@@ -116,7 +117,8 @@
 					"EDITION": "os",
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
-					"PERSISTENCE": "false"
+					"PERSISTENCE": "false",
+					"CHART_VERSION": "0.0.10-SNAPSHOT"
 				}
 			]
 		}
