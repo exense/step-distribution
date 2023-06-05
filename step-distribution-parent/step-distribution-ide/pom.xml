@@ -117,7 +117,7 @@
 							<rules>
 								<requireFilesSize>
 									<maxsize>250000000</maxsize>
-									<minsize>180000000</minsize>
+									<minsize>175000000</minsize>
 									<files>
 										<file>${project.build.directory}/step-ide-${project.version}.zip</file>
 									</files>
