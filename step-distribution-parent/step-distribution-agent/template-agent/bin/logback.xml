@@ -1,4 +1,4 @@
-<configuration scan="true" scanPeriod="60 seconds">
+<configuration scan="true">
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>../log/agent.log</file>
 		<encoder>
