@@ -36,7 +36,7 @@
 			<groupId>ch.exense.step</groupId>
 			<artifactId>step-controller-backend</artifactId>
 			<version>${step-backend.version}</version>
-		</dependency>Fv
+		</dependency>
 		<dependency>
 			<groupId>ch.exense.step.frontend</groupId>
 			<artifactId>step-app</artifactId>
