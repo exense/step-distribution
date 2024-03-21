@@ -76,25 +76,25 @@
 							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-11-dockerfile",
-							"FTP_DESTINATION": "step/${VERSION}/images/step-controller-${VERSION}-java-11.tar.gz"
+							"IMAGE_BASENAME": "step-controller-${VERSION}-java-11"
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-11-dockerfile",
-							"FTP_DESTINATION": "step/${VERSION}/images/step-agent-${VERSION}-java-11.tar.gz"
+							"IMAGE_BASENAME": "step-agent-${VERSION}-java-11"
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/controller:${VERSION}-java-17",
 							"CONFIG": "controller-17-dockerfile",
-							"FTP_DESTINATION": "step/${VERSION}/images/step-controller-${VERSION}-java-17.tar.gz"
+							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17"
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/agent:${VERSION}-java-17",
 							"CONFIG": "agent-17-dockerfile",
-							"FTP_DESTINATION": "step/${VERSION}/images/step-agent-${VERSION}-java-17.tar.gz"
+							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17"
 						}
 					]
 				}
