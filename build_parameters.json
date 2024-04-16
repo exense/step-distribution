@@ -74,28 +74,32 @@
 					"ACTIONS": [
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
+							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
+							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-11-dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-11",
 							"SHARE_ON_FTP": false
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
+							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
+							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-11-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-11",
 							"SHARE_ON_FTP": false
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
+							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
+							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
 							"CONFIG": "controller-17-dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
 							"SHARE_ON_FTP": true
 						},
 						{
 							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
+							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
+							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
 							"CONFIG": "agent-17-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
 							"SHARE_ON_FTP": true
