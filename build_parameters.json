@@ -103,6 +103,14 @@
 							"CONFIG": "agent-17-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
 							"SHARE_ON_FTP": true
+						},
+						{
+							"ORIGIN": "",
+							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
+							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
+							"CONFIG": "agent-nodejs-20-dockerfile",
+							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
+							"SHARE_ON_FTP": false
 						}
 					]
 				}
