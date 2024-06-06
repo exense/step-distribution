@@ -139,6 +139,16 @@
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
 					"PERSISTENCE": "false",
 					"CHART_VERSION": "0.0.16-SNAPSHOT"
+				},
+				{
+					"NAME": "FAKE_PRODUCTION",
+					"INSTANCE":	"last-release" ,
+					"APPLICATION": "stepos",
+					"EDITION": "os",
+					"DOMAIN": "stepcloud-test.ch",
+					"IMAGE_REPOSITORY": "docker.exense.ch/step",
+					"PERSISTENCE": "false",
+					"CHART_VERSION": "0.0.16-SNAPSHOT"
 				}
 			]
 		}
