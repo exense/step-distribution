@@ -68,6 +68,7 @@
 		<module>step-javascript-libraries</module>
 		<module>step-distribution-controller</module>
 		<module>step-distribution-ide</module>
+		<module>step-distribution-cli</module>
 	</modules>
 
 	<build>
