@@ -124,6 +124,7 @@
                                 <requires64Bit>false</requires64Bit>
                                 <minVersion></minVersion>
                                 <maxVersion></maxVersion>
+                                <opt>-Dlogback.statusListenerClass=ch.qos.logback.core.status.NopStatusListener</opt>
                             </jre>
                             <versionInfo>
                                 <!-- version only support format x.x.x.x -->
