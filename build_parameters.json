@@ -128,7 +128,7 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
 					"PERSISTENCE": "false",
-					"CHART_VERSION": "0.0.16-SNAPSHOT"
+					"CHART_VERSION": "1.0.1-SNAPSHOT"
 				},
 				{
 					"NAME": "INTEGRATION",
@@ -138,7 +138,7 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
 					"PERSISTENCE": "false",
-					"CHART_VERSION": "0.0.16-SNAPSHOT"
+					"CHART_VERSION": "1.0.1-SNAPSHOT"
 				},
 				{
 					"NAME": "PRODUCTION",
@@ -148,7 +148,7 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker.exense.ch/step",
 					"PERSISTENCE": "false",
-					"CHART_VERSION": "0.0.16-SNAPSHOT"
+					"CHART_VERSION": "1.0.1-SNAPSHOT"
 				}
 			]
 		}
