@@ -90,6 +90,7 @@
                         <configuration>
                             <executable>true</executable>
                             <finalName>step</finalName>
+                            <mainClass>step.cli.StepConsole</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -124,7 +125,6 @@
                                 <requires64Bit>false</requires64Bit>
                                 <minVersion></minVersion>
                                 <maxVersion></maxVersion>
-                                <opt>-Dlogback.statusListenerClass=ch.qos.logback.core.status.NopStatusListener</opt>
                             </jre>
                             <versionInfo>
                                 <!-- version only support format x.x.x.x -->
