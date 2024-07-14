@@ -111,7 +111,7 @@
                             <outfile>${project.build.directory}/step.exe</outfile>
                             <errTitle></errTitle>
                             <cmdLine></cmdLine>
-                            <chdir>.</chdir>
+<!--                            <chdir>.</chdir>-->
                             <priority>normal</priority>
                             <downloadUrl></downloadUrl>
                             <supportUrl></supportUrl>
