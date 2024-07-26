@@ -91,6 +91,7 @@
                             <executable>true</executable>
                             <finalName>step</finalName>
                             <mainClass>step.cli.StepConsole</mainClass>
+                            <embeddedLaunchScript>${basedir}/startCli.sh</embeddedLaunchScript>
                         </configuration>
                     </execution>
                 </executions>
