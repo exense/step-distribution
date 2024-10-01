@@ -118,7 +118,7 @@
 					"APPLICATION": "stepos",
 					"EDITION": "os",
 					"DOMAIN": "stepcloud-test.ch",
-					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
+					"IMAGE_REPOSITORY": "docker-dev.exense.ch",
 					"PERSISTENCE": "false",
 					"CHART_VERSION": "0.0.16-SNAPSHOT"
 				},
@@ -128,7 +128,7 @@
 					"APPLICATION": "stepos",
 					"EDITION": "os",
 					"DOMAIN": "stepcloud-test.ch",
-					"IMAGE_REPOSITORY": "docker-dev.exense.ch/step",
+					"IMAGE_REPOSITORY": "docker-dev.exense.ch",
 					"PERSISTENCE": "false",
 					"CHART_VERSION": "0.0.16-SNAPSHOT"
 				}
