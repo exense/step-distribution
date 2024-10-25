@@ -1,5 +1,5 @@
 # step
 
-**Documentation** available at : [https://step.exense.ch/knowledgebase](https://step.exense.ch/knowledgebase)
+**Documentation** available at : [https://step.dev/knowledgebase](https://step.dev/knowledgebase/)
 
-**Official Website** : [http://step.exense.ch](http://step.exense.ch)
+**Official Website** : [http://step.dev/](http://step.dev/)

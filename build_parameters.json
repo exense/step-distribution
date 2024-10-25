@@ -6,7 +6,7 @@
 		{
 			"ACTION": "COMPILE",
 			"TYPE": "POM",
-			"FOLDER": "step-distribution-parent/",
+			"FOLDER": ".",
 			"BEFORE": "step-os-upgrade-distribution",
 			"PARAMETERS": [
 				{
@@ -28,23 +28,23 @@
 					"TYPE": "GITHUB",
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step-controller-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step-agent-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step-ide-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-cli/target/step",
+							"ORIGIN": "step-distribution-cli/target/step",
 							"DESTINATION": "step"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-cli/target/step.exe",
+							"ORIGIN": "step-distribution-cli/target/step.exe",
 							"DESTINATION": "step.exe"
 						}
 					]
@@ -53,23 +53,23 @@
 					"TYPE": "FTP",
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-controller-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-agent-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-ide-${VERSION}.zip"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-cli/target/step",
+							"ORIGIN": "step-distribution-cli/target/step",
 							"DESTINATION": "step/${VERSION}/step"
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-cli/target/step.exe",
+							"ORIGIN": "step-distribution-cli/target/step.exe",
 							"DESTINATION": "step/${VERSION}/step.exe"
 						}
 					]
@@ -89,7 +89,7 @@
 					],
 					"ACTIONS": [
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-11-dockerfile",
@@ -97,7 +97,7 @@
 							"SHARE_ON_FTP": false
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-11-dockerfile",
@@ -105,7 +105,7 @@
 							"SHARE_ON_FTP": false
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
 							"CONFIG": "controller-17-dockerfile",
@@ -113,7 +113,7 @@
 							"SHARE_ON_FTP": true
 						},
 						{
-							"ORIGIN": "step-distribution-parent/step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
 							"CONFIG": "agent-17-dockerfile",
