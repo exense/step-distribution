@@ -7,7 +7,7 @@
 			"ACTION": "COMPILE",
 			"TYPE": "POM",
 			"FOLDER": ".",
-			"BEFORE": "step-os-upgrade-distribution-new",
+			"BEFORE": "step-os-upgrade-distribution",
 			"PARAMETERS": [
 				{
 					"NAME": "ALL",
