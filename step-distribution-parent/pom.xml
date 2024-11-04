@@ -61,7 +61,21 @@
 		<step-frontend.version>0.0.0</step-frontend.version>
 		<groovy.version>3.0.10</groovy.version>
 	</properties>
-	
+
+
+	<!-- This is important! Take dependency versions from base project -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>ch.exense.step</groupId>
+				<artifactId>step</artifactId>
+				<version>${step-backend.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<modules>
 		<module>step-distribution-agent</module>
 		<module>step-groovy-libraries</module>
