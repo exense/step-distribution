@@ -133,7 +133,7 @@
 			]
 		},
 		{
-			"ACTION": "DEPLOY_CICD-241",
+			"ACTION": "DEPLOY",
 			"TYPE": "CLUSTER",
 			"PARAMETERS": [
 				{
@@ -147,10 +147,8 @@
 					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
 					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
 					"HELM_CHART_FOLDER_NAME": "step-chart",
-					"HELM_STAGING_REPO_NAME": "exense-charts-staging",
-					"HELM_STAGING_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"HELM_RELEASE_REPO_NAME": "exense-charts",
-					"HELM_RELEASE_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
+					"HELM_CHART_REPO_NAME": "exense-charts-staging",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.1.2-SNAPSHOT"
 				},
 				{
@@ -164,10 +162,8 @@
 					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
 					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
 					"HELM_CHART_FOLDER_NAME": "step-chart",
-					"HELM_STAGING_REPO_NAME": "exense-charts-staging",
-					"HELM_STAGING_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"HELM_RELEASE_REPO_NAME": "exense-charts",
-					"HELM_RELEASE_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
+					"HELM_CHART_REPO_NAME": "exense-charts-staging",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.1.2-SNAPSHOT"
 				},
 				{
@@ -181,11 +177,9 @@
 					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
 					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
 					"HELM_CHART_FOLDER_NAME": "step-chart",
-					"HELM_STAGING_REPO_NAME": "exense-charts-staging",
-					"HELM_STAGING_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"HELM_RELEASE_REPO_NAME": "exense-charts",
-					"HELM_RELEASE_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.1.2-SNAPSHOT"
+					"HELM_CHART_REPO_NAME": "exense-charts",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
+					"CHART_VERSION": "1.1.1"
 				}
 			]
 		}
