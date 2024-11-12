@@ -144,6 +144,11 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch",
 					"PERSISTENCE": "false",
+					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
+					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
+					"HELM_CHART_FOLDER_NAME": "step-chart",
+					"HELM_CHART_REPO_NAME": "exense-charts-staging",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.1.2-SNAPSHOT"
 				},
 				{
@@ -154,6 +159,11 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker-dev.exense.ch",
 					"PERSISTENCE": "false",
+					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
+					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
+					"HELM_CHART_FOLDER_NAME": "step-chart",
+					"HELM_CHART_REPO_NAME": "exense-charts-staging",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.1.2-SNAPSHOT"
 				},
 				{
@@ -164,7 +174,12 @@
 					"DOMAIN": "stepcloud-test.ch",
 					"IMAGE_REPOSITORY": "docker.exense.ch",
 					"PERSISTENCE": "false",
-					"CHART_VERSION": "1.1.2-SNAPSHOT"
+					"HELM_CHART_GIT_REPO": "git@bitbucket.org:exenseteam/step-chart.git",
+					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step.values.yaml",
+					"HELM_CHART_FOLDER_NAME": "step-chart",
+					"HELM_CHART_REPO_NAME": "exense-charts",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
+					"CHART_VERSION": "1.1.1"
 				}
 			]
 		}
