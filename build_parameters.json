@@ -89,6 +89,7 @@
 					],
 					"ACTIONS": [
 						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
@@ -98,6 +99,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
