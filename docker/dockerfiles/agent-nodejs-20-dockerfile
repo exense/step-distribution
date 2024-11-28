@@ -14,8 +14,9 @@ WORKDIR /home/agent/
 CMD ../installDependencies.sh && ./startAgent.sh
 
 FROM common AS staging
-COPY --chown=agent:agent /home/agent/.npmrc /home/agent/.npmrc
+COPY --chown=agent:agent .npmrc /home/agent/.npmrc
 RUN npm install step-node-agent@${VERSION} --registry=https://nexus-enterprise-staging.exense.ch/repository/npm-all/ --legacy-peer-deps
+RUN rm -f /home/agent/.npmrc
 WORKDIR /home/agent/bin
 RUN ln -s /home/agent/node_modules/step-node-agent/bin/step-node-agent step-node-agent
 
