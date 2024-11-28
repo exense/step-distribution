@@ -14,10 +14,7 @@ WORKDIR /home/agent/
 CMD ../installDependencies.sh && ./startAgent.sh
 
 FROM common AS staging
-RUN echo "//registry.npmjs.org/:_authToken=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\n\
-//nexus-enterprise-staging.exense.ch/repository/npm-all/:_authToken=NpmToken.95475d52-8fdf-3d00-875e-dd5645dffb7f\n\
-//nexus-enterprise-staging.exense.ch/repository/staging-npm/:_authToken=NpmToken.95475d52-8fdf-3d00-875e-dd5645dffb7f\n\
-//nexus-enterprise.exense.ch/repository/exense-npm/:_authToken=NpmToken.8788597b-816d-3703-a8a3-844471255968" > /home/agent/.npmrc
+COPY --chown=agent:agent /home/agent/.npmrc /home/agent/.npmrc
 RUN npm install step-node-agent@${VERSION} --registry=https://nexus-enterprise-staging.exense.ch/repository/npm-all/ --legacy-peer-deps
 WORKDIR /home/agent/bin
 RUN ln -s /home/agent/node_modules/step-node-agent/bin/step-node-agent step-node-agent
