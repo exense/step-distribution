@@ -1,0 +1,28 @@
+ARG BASE_IMAGE=docker.exense.ch/base/agent:17-debian-12-slim
+FROM ${BASE_IMAGE} AS common
+LABEL author=jonathan.rubiero@exense.ch
+RUN sudo apt -yqq update && \
+    sudo apt-get -y install libdbus-glib-1-2 libharfbuzz-icu0 libgstreamer-plugins-base1.0-0 libgstreamer-gl1.0-0 libenchant-2-2 libhyphen0 libmanette-0.2-0 libgles2 gstreamer1.0-liba gstreamer1.0-plugins-bad && \
+    sudo rm -rf /var/lib/apt/lists/*
+COPY --chown=agent:agent installDependencies.sh /home/agent/
+RUN bash -c "mkdir -p /home/agent/{bin,conf,log}; chmod +x /home/agent/installDependencies.sh;"
+# Update nodejs and npm
+ARG NODE_VERSION=v20.12.2
+RUN bash -c "source $HOME/.nvm/nvm.sh && nvm install ${NODE_VERSION} && nvm use ${NODE_VERSION}"
+ARG VERSION=latest
+WORKDIR /home/agent/
+CMD ../installDependencies.sh && ./startAgent.sh
+
+FROM common AS staging
+RUN echo "//registry.npmjs.org/:_authToken=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\n\
+//nexus-enterprise-staging.exense.ch/repository/npm-all/:_authToken=NpmToken.95475d52-8fdf-3d00-875e-dd5645dffb7f\n\
+//nexus-enterprise-staging.exense.ch/repository/staging-npm/:_authToken=NpmToken.95475d52-8fdf-3d00-875e-dd5645dffb7f\n\
+//nexus-enterprise.exense.ch/repository/exense-npm/:_authToken=NpmToken.8788597b-816d-3703-a8a3-844471255968" > /home/agent/.npmrc
+RUN npm install step-node-agent@${VERSION} --registry=https://nexus-enterprise-staging.exense.ch/repository/npm-all/ --legacy-peer-deps
+WORKDIR /home/agent/bin
+RUN ln -s /home/agent/node_modules/step-node-agent/bin/step-node-agent step-node-agent
+
+FROM common as production
+RUN npm install step-node-agent@${VERSION}
+WORKDIR /home/agent/bin
+RUN ln -s /home/agent/node_modules/step-node-agent/bin/step-node-agent step-node-agent
