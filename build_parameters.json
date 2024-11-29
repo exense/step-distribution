@@ -89,20 +89,24 @@
 					],
 					"ACTIONS": [
 						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-11-dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-11",
-							"SHARE_ON_FTP": false
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-11-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-11",
-							"SHARE_ON_FTP": false
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
 						},
 						{
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
@@ -110,7 +114,8 @@
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
 							"CONFIG": "controller-17-dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
-							"SHARE_ON_FTP": true
+							"SHARE_ON_FTP": true,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-17"
 						},
 						{
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
@@ -118,7 +123,8 @@
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
 							"CONFIG": "agent-17-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
-							"SHARE_ON_FTP": true
+							"SHARE_ON_FTP": true,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-17"
 						},
 						{
 							"ORIGIN": "",
@@ -126,7 +132,8 @@
 							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
 							"CONFIG": "agent-nodejs-20-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
-							"SHARE_ON_FTP": false
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-17"
 						}
 					]
 				}
