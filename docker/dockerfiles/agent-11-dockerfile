@@ -1,0 +1,7 @@
+ARG BASE_IMAGE=docker.exense.ch/base/agent:11.0.13-jre-slim
+FROM ${BASE_IMAGE}
+LABEL author=jonathan.rubiero@exense.ch
+COPY --chown=agent:agent . /home/agent/
+RUN chmod +x /home/agent/installDependencies.sh /home/agent/bin/startAgent.sh
+WORKDIR /home/agent/bin/
+CMD ../installDependencies.sh && ./startAgent.sh

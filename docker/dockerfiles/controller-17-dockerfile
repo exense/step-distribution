@@ -1,0 +1,7 @@
+ARG BASE_IMAGE=docker.exense.ch/base/controller:17-debian-12-slim
+FROM ${BASE_IMAGE}
+LABEL author=jonathan.rubiero@exense.ch
+COPY --chown=controller:controller . /home/controller/
+RUN chmod +x /home/controller/installDependencies.sh /home/controller/bin/startController.sh
+WORKDIR /home/controller/bin/
+CMD ../installDependencies.sh && ./startController.sh
