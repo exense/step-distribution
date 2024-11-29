@@ -6,7 +6,7 @@
 		{
 			"ACTION": "COMPILE",
 			"TYPE": "POM",
-			"FOLDER": ".",
+			"FOLDER": "step-distribution-parent/",
 			"BEFORE": "step-os-upgrade-distribution",
 			"PARAMETERS": [
 				{
