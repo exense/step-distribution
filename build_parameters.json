@@ -153,7 +153,7 @@
 							"CONFIG": "agent-nodejs-20-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-17"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-21"
 						}
 					]
 				}
