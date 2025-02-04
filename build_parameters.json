@@ -109,22 +109,42 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
-							"CONFIG": "controller-17-dockerfile",
+							"CONFIG": "controller-dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-17"
 						},
 						{
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
+							"DESTINATION_PRD": "step/controller:${VERSION}-java-21",
+							"CONFIG": "controller-dockerfile",
+							"IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-21"
+						},
+						{
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
-							"CONFIG": "agent-17-dockerfile",
+							"CONFIG": "agent-dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-17"
+						},	
+						{
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
+							"DESTINATION_PRD": "step/agent:${VERSION}-java-21",
+							"CONFIG": "agent-dockerfile",
+							"IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-21"
 						},
 						{
 							"ORIGIN": "",
