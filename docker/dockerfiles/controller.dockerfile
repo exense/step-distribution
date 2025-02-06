@@ -41,6 +41,8 @@ ENV STEP_DP=""
 COPY --chown=controller:0 . /home/controller/
 # Default workdir
 WORKDIR /home/controller/bin/
+# Add necessary execution rights
+RUN chmod +x /home/controller/installDependencies.sh /home/controller/bin/startController.sh
 # Default startup command
 CMD ../installDependencies.sh && ./startController.sh
 
