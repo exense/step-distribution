@@ -113,47 +113,47 @@
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
-							"CONFIG": "controller-dockerfile",
+							"CONFIG": "controller.dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-17"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-17"
 						},
 						{
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-21",
-							"CONFIG": "controller-dockerfile",
+							"CONFIG": "controller.dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-21"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
 						},
 						{
 							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
-							"CONFIG": "agent-dockerfile",
+							"CONFIG": "agent.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-17"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						},	
 						{
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-21",
-							"CONFIG": "agent-dockerfile",
+							"CONFIG": "agent.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-21"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						},
 						{
 							"ORIGIN": "",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
 							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
-							"CONFIG": "agent-nodejs-20-dockerfile",
+							"CONFIG": "agent-nodejs-20.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
 							"SHARE_ON_FTP": false,
-							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-21"
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						}
 					]
 				}

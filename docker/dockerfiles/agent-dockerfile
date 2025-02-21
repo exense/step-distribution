@@ -1,7 +1,0 @@
-ARG BASE_IMAGE=docker.exense.ch/base/agent:17-debian-12-slim
-FROM ${BASE_IMAGE}
-LABEL author=jonathan.rubiero@exense.ch
-COPY --chown=agent:0 . /home/agent/
-RUN chmod +x /home/agent/installDependencies.sh /home/agent/bin/startAgent.sh
-WORKDIR /home/agent/bin/
-CMD ../installDependencies.sh && ./startAgent.sh
