@@ -18,6 +18,14 @@ RUN apt -yqq update && \
         ghostscript \
         postgresql-client && \
     rm -rf /var/lib/apt/lists/*
+# Configure locales
+RUN sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen && \
+    sed -i 's/^# *\(de_DE.UTF-8\)/\1/' /etc/locale.gen && \
+    locale-gen
+# Set environment variables for locale (user 0)
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
 # Create controller user
 RUN useradd -s /bin/bash -m -U -u 1000 controller
 # Give only required sudo privileges (mind STEP_DP...)
@@ -33,6 +41,10 @@ RUN mkdir -p /home/controller/.local/bin/ && \
     chmod -R g+wx /home/controller
 # Set USER as USERID
 USER 1000
+# Set environment variables for locale (user 1000)
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
 # Set PATH
 ENV PATH="$PATH:/home/controller/.local/bin/"
 # Environment variable
