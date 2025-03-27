@@ -27,7 +27,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>distro-assembly-agent</id>
@@ -48,7 +47,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>enforce-file-size</id>
