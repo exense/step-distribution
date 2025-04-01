@@ -89,7 +89,7 @@
 					],
 					"ACTIONS": [
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
@@ -99,7 +99,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
 						},
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
@@ -109,7 +109,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
 						},
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
@@ -128,7 +128,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
 						},
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
@@ -176,7 +176,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.1-SNAPSHOT"
+					"CHART_VERSION": "1.2.2-SNAPSHOT"
 				},
 				{
 					"NAME": "INTEGRATION",
@@ -191,7 +191,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.1-SNAPSHOT"
+					"CHART_VERSION": "1.2.2-SNAPSHOT"
 				},
 				{
 					"NAME": "PRODUCTION",
@@ -206,7 +206,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.0"
+					"CHART_VERSION": "1.2.1"
 				}
 			]
 		}
