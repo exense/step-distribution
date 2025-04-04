@@ -109,7 +109,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
 						},
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
@@ -128,7 +128,7 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
 						},
 						{
-							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
+							"DEACTIVATED": "DEVELOPMENT",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
