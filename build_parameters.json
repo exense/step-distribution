@@ -176,7 +176,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.2-SNAPSHOT"
+					"CHART_VERSION": "1.2.3-SNAPSHOT"
 				},
 				{
 					"NAME": "INTEGRATION",
@@ -191,7 +191,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.2-SNAPSHOT"
+					"CHART_VERSION": "1.2.3-SNAPSHOT"
 				},
 				{
 					"NAME": "PRODUCTION",
@@ -206,7 +206,7 @@
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts",
 					"HELM_CHART_REPO_URL": "https://nexus-enterprise.exense.ch/repository/exense-charts/",
-					"CHART_VERSION": "1.2.1"
+					"CHART_VERSION": "1.2.2"
 				}
 			]
 		}
