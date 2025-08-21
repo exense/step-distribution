@@ -15,9 +15,13 @@ RUN apt -yqq update && \
         dnsutils \
         stoken \
         locales \
-        ghostscript \
         postgresql-client && \
     rm -rf /var/lib/apt/lists/*
+# Install Ghostscript 10
+RUN wget https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs1000/ghostscript-10.0.0-linux-x86.tgz \
+    && tar -xvzf ghostscript-10.0.0-linux-x86.tgz \
+    && cp -r ghostscript-10.0.0-linux-x86/* /usr/bin/ \
+    && rm -rf ghostscript-10.0.0-linux-x86* 
 # Configure locales
 RUN sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen && \
     sed -i 's/^# *\(de_DE.UTF-8\)/\1/' /etc/locale.gen && \
