@@ -1,4 +1,8 @@
 ---
+### Step Agent configuration. Note that you can continue to use JSON configurations if
+### you prefer (i.e., AgentConf.json), but Yaml is the default (and only one shipped)
+### as it's more readable and has more features - for instance comments.
+
 # The URL of the grid
 gridHost: http://localhost:8081
 # The port this agent should listen on.
@@ -44,3 +48,8 @@ tokenGroups:
 properties:
   # The path to the installation folder of JMeter
   plugins.jmeter.home: "/path/to/jmeter/home"
+  # The following overrides the controller.url defined in step.properties for reporting purposes, if needed.
+  # Define this if, for example, your controller cannot be reached from the agent using the
+  # default name, or if you have some special routing setup, or in other similar circumstances.
+  #
+  # step.reporting.url: "http://thecontroller.lan:8080"
