@@ -25,6 +25,36 @@
 			"ACTION": "PUSH",
 			"ACTIONS": [
 				{
+					"TYPE": "NEXUS",
+					"ACTIONS": [
+						{
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_ASSET1": "step-controller-${VERSION}.zip"
+						},
+						{
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_ASSET1": "step-agent-${VERSION}.zip"
+						},
+						{
+							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_ASSET1": "step-ide-${VERSION}.zip"
+						},
+						{
+							"ORIGIN": "step-distribution-cli/target/step",
+							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_ASSET1": "step"
+						},
+						{
+							"ORIGIN": "step-distribution-cli/target/step.exe",
+							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_ASSET1": "step.exe"
+						}
+					]
+				},
+				{
 					"TYPE": "GITHUB",
 					"ACTIONS": [
 						{
@@ -53,22 +83,27 @@
 					"TYPE": "FTP",
 					"ACTIONS": [
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-controller-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-agent-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-ide-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step",
 							"DESTINATION": "step/${VERSION}/step"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step.exe",
 							"DESTINATION": "step/${VERSION}/step.exe"
 						}
@@ -136,7 +171,7 @@
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
-						},	
+						},
 						{
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
