@@ -83,22 +83,27 @@
 					"TYPE": "FTP",
 					"ACTIONS": [
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-controller-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-agent-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"DESTINATION": "step/${VERSION}/step-ide-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step",
 							"DESTINATION": "step/${VERSION}/step"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step.exe",
 							"DESTINATION": "step/${VERSION}/step.exe"
 						}
