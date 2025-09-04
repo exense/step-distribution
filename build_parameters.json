@@ -29,27 +29,27 @@
 					"ACTIONS": [
 						{
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${VERSION}/",
-							"RAW_ASSET1": "step-controller-${VERSION}.zip"
+							"RAW_DIRECTORY": "/step/${BRANCH}/",
+							"RAW_ASSET1": "step-controller-${BRANCH}.zip"
 						},
 						{
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${VERSION}/",
-							"RAW_ASSET1": "step-agent-${VERSION}.zip"
+							"RAW_DIRECTORY": "/step/${BRANCH}/",
+							"RAW_ASSET1": "step-agent-${BRANCH}.zip"
 						},
 						{
 							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${VERSION}/",
-							"RAW_ASSET1": "step-ide-${VERSION}.zip"
+							"RAW_DIRECTORY": "/step/${BRANCH}/",
+							"RAW_ASSET1": "step-ide-${BRANCH}.zip"
 						},
 						{
 							"ORIGIN": "step-distribution-cli/target/step",
-							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_DIRECTORY": "/step/${BRANCH}/",
 							"RAW_ASSET1": "step"
 						},
 						{
 							"ORIGIN": "step-distribution-cli/target/step.exe",
-							"RAW_DIRECTORY": "/step/${VERSION}/",
+							"RAW_DIRECTORY": "/step/${BRANCH}/",
 							"RAW_ASSET1": "step.exe"
 						}
 					]
