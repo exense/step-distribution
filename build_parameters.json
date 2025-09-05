@@ -30,31 +30,31 @@
 						{
 							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${BRANCH}/",
-							"RAW_ASSET1": "step-controller-${BRANCH}.zip"
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-controller-${SIMPLIFIED_BRANCH_NAME}.zip"
 						},
 						{
 							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${BRANCH}/",
-							"RAW_ASSET1": "step-agent-${BRANCH}.zip"
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-agent-${SIMPLIFIED_BRANCH_NAME}.zip"
 						},
 						{
 							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
-							"RAW_DIRECTORY": "/step/${BRANCH}/",
-							"RAW_ASSET1": "step-ide-${BRANCH}.zip"
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-ide-${SIMPLIFIED_BRANCH_NAME}.zip"
 						},
 						{
 							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-cli/target/step",
-							"RAW_DIRECTORY": "/step/${BRANCH}/",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
 							"RAW_ASSET1": "step"
 						},
 						{
 							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-cli/target/step.exe",
-							"RAW_DIRECTORY": "/step/${BRANCH}/",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
 							"RAW_ASSET1": "step.exe"
 						},
 						{
