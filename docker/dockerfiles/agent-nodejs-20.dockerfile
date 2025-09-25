@@ -39,7 +39,7 @@ FROM common AS staging
 # Uses build server .npmrc configuration to gain access to Nexus staging
 COPY --chown=agent:0 .npmrc /home/agent/.npmrc
 # Install staging agent
-RUN bash -c "npm install step-node-agent@${VERSION} --registry=https://nexus-enterprise-staging.exense.ch/repository/npm-all/ --legacy-peer-deps"
+RUN bash -c "npm install step-node-agent@${VERSION} --registry=https://nexus-enterprise-staging-new.exense.ch/repository/npm-all/ --legacy-peer-deps"
 # Cleanup .npmrc configuration
 RUN rm -f /home/agent/.npmrc
 # Update workdir
