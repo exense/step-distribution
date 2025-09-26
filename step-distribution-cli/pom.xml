@@ -116,6 +116,7 @@
                                 <txtFileVersion>${project.version}</txtFileVersion>
                                 <txtProductVersion>${project.version}</txtProductVersion>
                             </versionInfo>
+                            <disableVersionInfoDefaults>true</disableVersionInfoDefaults>
                         </configuration>
                     </execution>
                 </executions>
