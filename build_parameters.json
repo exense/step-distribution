@@ -28,26 +28,61 @@
 					"TYPE": "NEXUS",
 					"ACTIONS": [
 						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-controller-${SIMPLIFIED_BRANCH_NAME}.zip"
+						},
+						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-agent-${SIMPLIFIED_BRANCH_NAME}.zip"
+						},
+						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step-ide-${SIMPLIFIED_BRANCH_NAME}.zip"
+						},
+						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-cli/target/step",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step"
+						},
+						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-cli/target/step.exe",
+							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/",
+							"RAW_ASSET1": "step.exe"
+						},
+						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"RAW_DIRECTORY": "/step/${VERSION}/",
 							"RAW_ASSET1": "step-controller-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"RAW_DIRECTORY": "/step/${VERSION}/",
 							"RAW_ASSET1": "step-agent-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
 							"RAW_DIRECTORY": "/step/${VERSION}/",
 							"RAW_ASSET1": "step-ide-${VERSION}.zip"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step",
 							"RAW_DIRECTORY": "/step/${VERSION}/",
 							"RAW_ASSET1": "step"
 						},
 						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-cli/target/step.exe",
 							"RAW_DIRECTORY": "/step/${VERSION}/",
 							"RAW_ASSET1": "step.exe"
@@ -126,67 +161,100 @@
 						{
 							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
-							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
+							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"CONFIG": "controller-11-dockerfile",
-							"IMAGE_BASENAME": "step-controller-${VERSION}-java-11",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-11",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
 						},
 						{
 							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
-							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
+							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"CONFIG": "agent-11-dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-java-11",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-11",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
 						},
 						{
 							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
-							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
+							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"CONFIG": "controller.dockerfile",
-							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-17",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-17"
 						},
 						{
+							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
+							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
+							"CONFIG": "controller.dockerfile",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-21",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
+						},
+						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-21",
 							"CONFIG": "controller.dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
+							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
 						},
 						{
 							"DEACTIVATED": "DEVELOPMENT,PRODUCTION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
-							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
+							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"CONFIG": "agent.dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-17",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						},
 						{
+							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
+							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
+							"CONFIG": "agent.dockerfile",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-21",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+						},
+						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-21",
 							"CONFIG": "agent.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
+							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						},
 						{
+							"DEACTIVATED": "PRODUCTION",
 							"ORIGIN": "",
-							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
+							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
+							"CONFIG": "agent-nodejs-20.dockerfile",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-nodejs-20",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
+							"SHARE_ON_FTP": false,
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+						},
+						{
+							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
+							"ORIGIN": "",
 							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
 							"CONFIG": "agent-nodejs-20.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
+							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						}

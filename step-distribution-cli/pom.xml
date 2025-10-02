@@ -113,7 +113,10 @@
                                 <productName>Step CLI</productName>
                                 <internalName>step</internalName>
                                 <originalFilename>step.exe</originalFilename>
+                                <txtFileVersion>${project.version}</txtFileVersion>
+                                <txtProductVersion>${project.version}</txtProductVersion>
                             </versionInfo>
+                            <disableVersionInfoDefaults>true</disableVersionInfoDefaults>
                         </configuration>
                     </execution>
                 </executions>
