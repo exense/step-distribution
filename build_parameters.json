@@ -164,7 +164,7 @@
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-11",
 							"CONFIG": "controller-11-dockerfile",
-							"IMAGE_BASENAME": "step-controller-${VERSION}-java-11",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-11",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
@@ -175,7 +175,7 @@
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-11",
 							"CONFIG": "agent-11-dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-java-11",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-11",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
@@ -186,7 +186,7 @@
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-17",
 							"CONFIG": "controller.dockerfile",
-							"IMAGE_BASENAME": "step-controller-${VERSION}-java-17",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-17",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-17"
@@ -197,7 +197,7 @@
 							"DESTINATION":     "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
 							"DESTINATION_PRD": "step/controller:${VERSION}-java-21",
 							"CONFIG": "controller.dockerfile",
-							"IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-21",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
@@ -219,7 +219,7 @@
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-17",
 							"CONFIG": "agent.dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-java-17",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-17",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
@@ -230,7 +230,7 @@
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-java-21",
 							"DESTINATION_PRD": "step/agent:${VERSION}-java-21",
 							"CONFIG": "agent.dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-21",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
@@ -252,7 +252,7 @@
 							"DESTINATION":     "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
 							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
 							"CONFIG": "agent-nodejs-20.dockerfile",
-							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-nodejs-20",
 							"RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}/sbom/",
 							"SHARE_ON_FTP": false,
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
