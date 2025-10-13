@@ -15,7 +15,7 @@ RUN apt -yqq update && \
         dnsutils \
         stoken \
         locales \
-        ghostscript \
+        ghostscript=10.0.0~dfsg-11+deb12u8 \
         postgresql-client && \
     rm -rf /var/lib/apt/lists/*
 # Configure locales
