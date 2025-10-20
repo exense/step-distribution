@@ -201,7 +201,7 @@
 						{
 							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-							"DESTINATION_PRD": "step/controller:${VERSION}-java-21",
+							"DESTINATION": "step/controller:${VERSION}-java-21",
 							"CONFIG": "controller.dockerfile",
 							"IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
 							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
@@ -231,7 +231,7 @@
 						{
 							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-							"DESTINATION_PRD": "step/agent:${VERSION}-java-21",
+							"DESTINATION": "step/agent:${VERSION}-java-21",
 							"CONFIG": "agent.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
 							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
@@ -251,7 +251,7 @@
 						{
 							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "",
-							"DESTINATION_PRD": "step/agent:${VERSION}-nodejs-20",
+							"DESTINATION": "step/agent:${VERSION}-nodejs-20",
 							"CONFIG": "agent-nodejs-20.dockerfile",
 							"IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
 							"SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
