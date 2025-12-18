@@ -150,7 +150,7 @@
 					"PARAMETERS": [
 						{
 							"NAME": "ALL",
-							"URL": "docker-dev.exense.ch"
+							"URL": "europe-west6-docker.pkg.dev/exense-dev"
 						},
 						{
 							"NAME": "PRODUCTION",
