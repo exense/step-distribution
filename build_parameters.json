@@ -278,7 +278,7 @@
 					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step-java21.values.yaml",
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
-					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.stepcloud-test.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.2.6-SNAPSHOT"
 				},
 				{
@@ -293,7 +293,7 @@
 					"HELM_DEFAULT_VALUES_RELATIVE_PATH": "values/internal/step-java21.values.yaml",
 					"HELM_CHART_FOLDER_NAME": "step-chart",
 					"HELM_CHART_REPO_NAME": "exense-charts-staging",
-					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.exense.ch/repository/exense-charts/",
+					"HELM_CHART_REPO_URL": "https://nexus-enterprise-staging.stepcloud-test.ch/repository/exense-charts/",
 					"CHART_VERSION": "1.2.6-SNAPSHOT"
 				},
 				{
