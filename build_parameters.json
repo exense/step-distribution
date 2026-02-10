@@ -195,6 +195,15 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
 						},
 						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
+							"DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-25",
+							"CONFIG": "controller.dockerfile",
+							"IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-25",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-25"
+						},
+						{
 							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
 							"DESTINATION": "step/controller:${VERSION}-java-21",

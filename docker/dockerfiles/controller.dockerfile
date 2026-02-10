@@ -87,3 +87,19 @@ RUN curl --output /tmp/jdk.tgz https://download.oracle.com/java/21/latest/jdk-21
 USER 1000
 # Update path environment variable
 ENV PATH=$JAVA_HOME/bin:$PATH
+
+# Multistage build - java 25
+FROM common AS java-25
+# Switch to root user
+USER 0
+# Set Java environment
+ENV JAVA_HOME=/usr/java/jdk-25
+# Install Java 21
+RUN curl --output /tmp/jdk.tgz https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz && \
+    mkdir -p "$JAVA_HOME" && \
+    tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
+    rm -rf /tmp/jdk.tgz \
+# Switch to regular user
+USER 1000
+# Update path
+ENV PATH=$JAVA_HOME/bin:$PATH
