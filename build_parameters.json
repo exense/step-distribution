@@ -231,6 +231,15 @@
 							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
 						},
 						{
+							"DEACTIVATED": "PRODUCTION",
+							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
+							"DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-25",
+							"CONFIG": "agent.dockerfile",
+							"IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-25",
+							"SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
+							"DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+						},
+						{
 							"DEACTIVATED": "DEVELOPMENT,INTEGRATION",
 							"ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
 							"DESTINATION": "step/agent:${VERSION}-java-21",
