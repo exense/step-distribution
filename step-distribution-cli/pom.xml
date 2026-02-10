@@ -54,20 +54,23 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- spring boot is used to create the executable jar -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.1</version>
                 <executions>
                     <execution>
+                        <phase>package</phase>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <executable>true</executable>
                             <finalName>step</finalName>
-                            <mainClass>step.cli.StepConsole</mainClass>
-                            <embeddedLaunchScript>${basedir}/startCli.sh</embeddedLaunchScript>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>step.cli.StepConsole</mainClass>
+                                </transformer>
+                            </transformers>
                         </configuration>
                     </execution>
                 </executions>
@@ -88,13 +91,13 @@
                             <outfile>${project.build.directory}/step.exe</outfile>
                             <errTitle></errTitle>
                             <cmdLine></cmdLine>
-<!--                            <chdir>.</chdir>-->
+                            <!--                            <chdir>.</chdir>-->
                             <priority>normal</priority>
                             <downloadUrl></downloadUrl>
                             <supportUrl></supportUrl>
                             <stayAlive>false</stayAlive>
                             <restartOnCrash>false</restartOnCrash>
-<!--                            <manifest></manifest>-->
+                            <!--                            <manifest></manifest>-->
                             <icon></icon>
                             <jre>
                                 <path>%JAVA_HOME%;%PATH%</path>
@@ -122,24 +125,25 @@
                 </executions>
             </plugin>
 
-            <!-- TO remove the .jar extension from generated executable jar file for Unix -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
+                <groupId>org.skife.maven</groupId>
+                <artifactId>really-executable-jar-maven-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+<!--                    <flags>-Xmx1G</flags>-->
+                    <inputFile>${project.build.directory}/step.jar</inputFile>
+                    <programFile>step</programFile>
+                </configuration>
                 <executions>
                     <execution>
-                        <phase>install</phase>
-                        <configuration>
-                            <target>
-                                <move file="${project.build.directory}/step.jar" tofile="${project.build.directory}/step"/>
-                            </target>
-                        </configuration>
+                        <phase>package</phase>
                         <goals>
-                            <goal>run</goal>
+                            <goal>really-executable-jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>
