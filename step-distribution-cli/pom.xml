@@ -91,13 +91,11 @@
                             <outfile>${project.build.directory}/step.exe</outfile>
                             <errTitle></errTitle>
                             <cmdLine></cmdLine>
-                            <!--                            <chdir>.</chdir>-->
                             <priority>normal</priority>
                             <downloadUrl></downloadUrl>
                             <supportUrl></supportUrl>
                             <stayAlive>false</stayAlive>
                             <restartOnCrash>false</restartOnCrash>
-                            <!--                            <manifest></manifest>-->
                             <icon></icon>
                             <jre>
                                 <path>%JAVA_HOME%;%PATH%</path>
@@ -130,6 +128,7 @@
                 <artifactId>really-executable-jar-maven-plugin</artifactId>
                 <version>2.1.1</version>
                 <configuration>
+                    <!-- Keeping commented flags to remember customizations are possible -->
 <!--                    <flags>-Xmx1G</flags>-->
                     <inputFile>${project.build.directory}/step.jar</inputFile>
                     <programFile>step</programFile>
