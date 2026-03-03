@@ -5,7 +5,7 @@
 
     <artifactId>step-groovy-libraries</artifactId>
     <version>0.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>Step OSS Groovy Lib</name>
 
     <parent>
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.codehaus.groovy</groupId>
+            <groupId>org.apache.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <version>${groovy.version}</version>
             <type>pom</type>
@@ -40,7 +40,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.groovy</groupId>
+            <groupId>org.apache.groovy</groupId>
             <artifactId>groovy-dateutil</artifactId>
             <version>${groovy.version}</version>
         </dependency>
@@ -50,21 +50,44 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <finalName>${project.build.finalName}</finalName>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.0</version>
                 <executions>
                     <execution>
                         <id>assemble-all</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>single</goal>
+                            <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <finalName>${project.build.finalName}</finalName>
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+                            <transformers>
+                                <!-- Merges all Groovy extension module descriptors into one -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.GroovyResourceTransformer">
+                                    <extModuleName>${project.artifactId}-aggregated</extModuleName>
+                                    <extModuleVersion>${project.version}</extModuleVersion>
+                                </transformer>
+                                <!-- Merges META-INF/services/* SPI files (also needed for Groovy internals) -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <!-- Preserves the correct main manifest entry if needed -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>ch.exense.step</mainClass>
+                                </transformer>
+                            </transformers>
+                            <filters>
+                                <!-- Exclude module-info.class files to avoid JPMS conflicts in fat jars -->
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>module-info.class</exclude>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
