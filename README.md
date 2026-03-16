@@ -6,7 +6,6 @@
 This repository contains the release bundles and Docker images for **[Step](https://github.com/exense/step)** — an open-source automation platform that unifies software automation across the entire DevOps lifecycle.
 
 For full documentation, architecture details, and getting started guides, see the main repository:
-
 **[github.com/exense/step](https://github.com/exense/step)**
 
 ## Downloads
