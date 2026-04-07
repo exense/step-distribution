@@ -51,9 +51,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <maven.compiler.release>11</maven.compiler.release>
+    <maven.compiler.source>42</maven.compiler.source>
+    <maven.compiler.target>42</maven.compiler.target>
+    <maven.compiler.release>42</maven.compiler.release>
 
     <!-- Exense projects -->
     <step-backend.version>0.0.0-SNAPSHOT</step-backend.version>
