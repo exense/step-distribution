@@ -53,25 +53,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- Actually, there is nothing in this project to compile. But if we ever add
     source code, it will use these, so keep them in sync with the main project -->
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
     <maven.compiler.release>21</maven.compiler.release>
 
     <!-- Exense projects -->
     <step-backend.version>0.0.0-SNAPSHOT</step-backend.version>
     <step-frontend.version>0.0.0</step-frontend.version>
     <groovy.version>5.0.4</groovy.version>
-
-    <!-- maven plugin versions -->
-    <dep.mvn.antrun.version>1.7</dep.mvn.antrun.version>
-    <dep.mvn.assembly.version>3.7.1</dep.mvn.assembly.version>
-    <dep.mvn.compiler.version>3.14.0</dep.mvn.compiler.version>
-    <dep.mvn.dependency.version>3.3.0</dep.mvn.dependency.version>
-    <dep.mvn.deploy.version>3.0.0-M1</dep.mvn.deploy.version>
-    <dep.mvn.enforcer.version>3.1.0</dep.mvn.enforcer.version>
-    <dep.mvn.spring-boot.version>2.7.18</dep.mvn.spring-boot.version>
-    <dep.mvn.launch4j.version>2.5.1</dep.mvn.launch4j.version>
-    <dep.mvn.codehaus-build-helper.version>3.6.0</dep.mvn.codehaus-build-helper.version>
   </properties>
 
 
@@ -103,47 +90,47 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>${dep.mvn.antrun.version}</version>
+          <version>1.7</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>${dep.mvn.assembly.version}</version>
+          <version>3.7.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${dep.mvn.compiler.version}</version>
+          <version>3.14.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>${dep.mvn.dependency.version}</version>
+          <version>3.3.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>${dep.mvn.deploy.version}</version>
+          <version>3.0.0-M1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>${dep.mvn.enforcer.version}</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>${dep.mvn.spring-boot.version}</version>
+          <version>2.7.18</version>
         </plugin>
         <plugin>
           <groupId>com.akathist.maven.plugins.launch4j</groupId>
           <artifactId>launch4j-maven-plugin</artifactId>
-          <version>${dep.mvn.launch4j.version}</version>
+          <version>2.5.1</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>${dep.mvn.codehaus-build-helper.version}</version>
+          <version>3.6.0</version>
         </plugin>
 
       </plugins>
