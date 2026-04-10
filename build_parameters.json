@@ -128,33 +128,6 @@
           ],
           "ACTIONS": [
             {
-              "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
-              "ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-              "DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-11",
-              "CONFIG": "controller-11-dockerfile",
-              "IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-11",
-              "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/controller:${BRANCH}-java-11"
-            },
-            {
-              "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
-              "ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-              "DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-11",
-              "CONFIG": "agent-11-dockerfile",
-              "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-11",
-              "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=docker.exense.ch/base/agent:${BRANCH}-java-11"
-            },
-            {
-              "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
-              "ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
-              "DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-17",
-              "CONFIG": "controller.dockerfile",
-              "IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-17",
-              "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-17"
-            },
-            {
               "DEACTIVATED": "PRODUCTION",
               "ORIGIN": "step-distribution-controller/target/step-controller-${VERSION}.zip",
               "DESTINATION": "step/controller:${BRANCH}-${ENVIRONMENT}-java-21",
@@ -180,15 +153,6 @@
               "IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
               "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
-            },
-            {
-              "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
-              "ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
-              "DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-java-17",
-              "CONFIG": "agent.dockerfile",
-              "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-17",
-              "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
             },
             {
               "DEACTIVATED": "PRODUCTION",
