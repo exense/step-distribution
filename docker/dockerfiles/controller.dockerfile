@@ -58,20 +58,6 @@ RUN chmod +x /home/controller/installDependencies.sh /home/controller/bin/startC
 # Default startup command
 CMD ../installDependencies.sh && ./startController.sh
 
-# Multistage build - java 17
-FROM common AS java-17
-# Switch to root user
-USER 0
-# Install Java 17
-RUN apt -yqq update && \
-    apt install --no-install-recommends -yqq openjdk-17-jdk && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
-# Switch to regular user
-USER 1000
-# Set Java environment
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
-
 # Multistage build - java 21
 FROM common AS java-21
 # Switch to root user
