@@ -74,33 +74,6 @@
           "widthInCells": 8,
           "heightInCells": 3
         }
-      },
-      {
-        "widgetType": "notificationSubscriptionForExecution",
-        "position": {
-          "row": 14,
-          "column": 1,
-          "widthInCells": 4,
-          "heightInCells": 3
-        }
-      },
-      {
-        "widgetType": "housekeepingSettingsForExecution",
-        "position": {
-          "row": 14,
-          "column": 5,
-          "widthInCells": 4,
-          "heightInCells": 3
-        }
-      },
-      {
-        "widgetType": "currentOperations",
-        "position": {
-          "row": 17,
-          "column": 1,
-          "widthInCells": 4,
-          "heightInCells": 3
-        }
       }
     ]
   }
