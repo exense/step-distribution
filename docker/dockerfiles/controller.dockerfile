@@ -79,7 +79,7 @@ USER 0
 # Set Java environment
 ENV JAVA_HOME=/usr/java/jdk-21
 # Install Java 21
-RUN curl --output /tmp/jdk.tgz https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_linux-x64_bin.tar.gz && \
+RUN curl --output /tmp/jdk.tgz "https://api.adoptium.net/v3/binary/latest/21/ga/linux/x64/jdk/hotspot/normal/eclipse" && \
     mkdir -p "$JAVA_HOME" && \
     tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
     rm -rf /tmp/jdk.tgz
