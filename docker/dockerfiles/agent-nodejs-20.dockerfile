@@ -5,7 +5,7 @@ LABEL author=jonathan.rubiero@exense.ch
 RUN apt -yqq update && apt install -yqq --no-install-recommends curl ca-certificates sudo wget unzip
 # Install NVM and Nodejs in one RUN step to minimize layers
 ENV NVM_DIR=/usr/local/nvm
-ENV NODE_VERSION=20.12.2
+ENV NODE_VERSION=24.14.0
 ENV PATH=$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 RUN mkdir -p $NVM_DIR && \
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
@@ -13,7 +13,7 @@ RUN mkdir -p $NVM_DIR && \
     ln -s $NVM_DIR/versions/node/v$NODE_VERSION/bin/node /usr/bin/node && \
     ln -s $NVM_DIR/versions/node/v$NODE_VERSION/bin/npm /usr/bin/npm && \
     ln -s $NVM_DIR/versions/node/v$NODE_VERSION/bin/npx /usr/bin/npx && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # Create agent user
 RUN useradd -s /bin/bash -m -U -u 1000 agent
 # Create necessary directories

@@ -1,148 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) exense GmbH -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>step-distribution-cli</artifactId>
+  <artifactId>step-distribution-cli</artifactId>
+  <version>0.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Step CLI Distribution</name>
+
+  <parent>
+    <groupId>ch.exense.step</groupId>
+    <artifactId>step-distribution</artifactId>
     <version>0.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>Step CLI Distribution</name>
+  </parent>
 
-    <parent>
-        <groupId>ch.exense.step</groupId>
-        <artifactId>step-distribution</artifactId>
-        <version>0.0.0-SNAPSHOT</version>
-    </parent>
+  <dependencies>
+    <dependency>
+      <groupId>ch.exense.step</groupId>
+      <artifactId>step-cli-launcher</artifactId>
+      <version>${step-backend.version}</version>
+    </dependency>
+  </dependencies>
 
-    <dependencies>
-        <dependency>
-            <groupId>ch.exense.step</groupId>
-            <artifactId>step-cli-launcher</artifactId>
-            <version>${step-backend.version}</version>
-        </dependency>
-    </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+        <plugin>
+          <groupId>com.akathist.maven.plugins.launch4j</groupId>
+          <artifactId>launch4j-maven-plugin</artifactId>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <!-- required on the build pipeline -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <!-- parse project version, used for windows executable version -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>parse-version</id>
+            <goals>
+              <goal>parse-version</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <finalName>step</finalName>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>step.cli.StepConsole</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- wrap executable jar into windows executable -->
+      <plugin>
+        <groupId>com.akathist.maven.plugins.launch4j</groupId>
+        <artifactId>launch4j-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>l4j-clui</id>
+            <phase>package</phase>
+            <goals>
+              <goal>launch4j</goal>
+            </goals>
+            <configuration>
+              <dontWrapJar>false</dontWrapJar>
+              <headerType>console</headerType>
+              <jar>${project.build.directory}/step.jar</jar>
+              <outfile>${project.build.directory}/step.exe</outfile>
+              <errTitle></errTitle>
+              <cmdLine></cmdLine>
+              <priority>normal</priority>
+              <downloadUrl></downloadUrl>
+              <supportUrl></supportUrl>
+              <stayAlive>false</stayAlive>
+              <restartOnCrash>false</restartOnCrash>
+              <icon></icon>
+              <jre>
+                <path>%JAVA_HOME%;%PATH%</path>
+                <requiresJdk>false</requiresJdk>
+                <requires64Bit>false</requires64Bit>
+                <minVersion></minVersion>
+                <maxVersion></maxVersion>
+              </jre>
+              <versionInfo>
+                <!-- version only support format x.x.x.x -->
+                <fileVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.0</fileVersion>
+                <fileDescription>Step CLI for windows</fileDescription>
+                <companyName>exense GmbH</companyName>
+                <copyright>Copyright (C) 2020, exense GmbH</copyright>
+                <productVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.0</productVersion>
+                <productName>Step CLI</productName>
+                <internalName>step</internalName>
+                <originalFilename>step.exe</originalFilename>
+                <txtFileVersion>${project.version}</txtFileVersion>
+                <txtProductVersion>${project.version}</txtProductVersion>
+              </versionInfo>
+              <disableVersionInfoDefaults>true</disableVersionInfoDefaults>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-                <plugin>
-                    <groupId>com.akathist.maven.plugins.launch4j</groupId>
-                    <artifactId>launch4j-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <!-- required on the build pipeline -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-            <!-- parse project version, used for windows executable version -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>parse-version</id>
-                        <goals>
-                            <goal>parse-version</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.6.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>step</finalName>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>step.cli.StepConsole</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- wrap executable jar into windows executable -->
-            <plugin>
-                <groupId>com.akathist.maven.plugins.launch4j</groupId>
-                <artifactId>launch4j-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>l4j-clui</id>
-                        <phase>package</phase>
-                        <goals><goal>launch4j</goal></goals>
-                        <configuration>
-                            <dontWrapJar>false</dontWrapJar>
-                            <headerType>console</headerType>
-                            <jar>${project.build.directory}/step.jar</jar>
-                            <outfile>${project.build.directory}/step.exe</outfile>
-                            <errTitle></errTitle>
-                            <cmdLine></cmdLine>
-                            <priority>normal</priority>
-                            <downloadUrl></downloadUrl>
-                            <supportUrl></supportUrl>
-                            <stayAlive>false</stayAlive>
-                            <restartOnCrash>false</restartOnCrash>
-                            <icon></icon>
-                            <jre>
-                                <path>%JAVA_HOME%;%PATH%</path>
-                                <requiresJdk>false</requiresJdk>
-                                <requires64Bit>false</requires64Bit>
-                                <minVersion></minVersion>
-                                <maxVersion></maxVersion>
-                            </jre>
-                            <versionInfo>
-                                <!-- version only support format x.x.x.x -->
-                                <fileVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.0</fileVersion>
-                                <fileDescription>Step CLI for windows</fileDescription>
-                                <companyName>exense GmbH</companyName>
-                                <copyright>Copyright (C) 2020, exense GmbH</copyright>
-                                <productVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}.0</productVersion>
-                                <productName>Step CLI</productName>
-                                <internalName>step</internalName>
-                                <originalFilename>step.exe</originalFilename>
-                                <txtFileVersion>${project.version}</txtFileVersion>
-                                <txtProductVersion>${project.version}</txtProductVersion>
-                            </versionInfo>
-                            <disableVersionInfoDefaults>true</disableVersionInfoDefaults>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+      <plugin>
+        <groupId>org.skife.maven</groupId>
+        <artifactId>really-executable-jar-maven-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <!-- Keeping commented flags to remember customizations are possible -->
+          <!--                    <flags>-Xmx1G</flags>-->
+          <inputFile>${project.build.directory}/step.jar</inputFile>
+          <programFile>step</programFile>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>really-executable-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
-            <plugin>
-                <groupId>org.skife.maven</groupId>
-                <artifactId>really-executable-jar-maven-plugin</artifactId>
-                <version>2.1.1</version>
-                <configuration>
-                    <!-- Keeping commented flags to remember customizations are possible -->
-<!--                    <flags>-Xmx1G</flags>-->
-                    <inputFile>${project.build.directory}/step.jar</inputFile>
-                    <programFile>step</programFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>really-executable-jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
-    </build>
+    </plugins>
+  </build>
 </project>

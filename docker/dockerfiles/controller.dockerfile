@@ -58,20 +58,6 @@ RUN chmod +x /home/controller/installDependencies.sh /home/controller/bin/startC
 # Default startup command
 CMD ../installDependencies.sh && ./startController.sh
 
-# Multistage build - java 17
-FROM common AS java-17
-# Switch to root user
-USER 0
-# Install Java 17
-RUN apt -yqq update && \
-    apt install --no-install-recommends -yqq openjdk-17-jdk && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
-# Switch to regular user
-USER 1000
-# Set Java environment
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
-
 # Multistage build - java 21
 FROM common AS java-21
 # Switch to root user
@@ -79,7 +65,7 @@ USER 0
 # Set Java environment
 ENV JAVA_HOME=/usr/java/jdk-21
 # Install Java 21
-RUN curl --output /tmp/jdk.tgz https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz && \
+RUN curl -L --output /tmp/jdk.tgz "https://api.adoptium.net/v3/binary/latest/21/ga/linux/x64/jdk/hotspot/normal/eclipse" && \
     mkdir -p "$JAVA_HOME" && \
     tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
     rm -rf /tmp/jdk.tgz
@@ -95,7 +81,7 @@ USER 0
 # Set Java environment
 ENV JAVA_HOME=/usr/java/jdk-25
 # Install Java 21
-RUN curl --output /tmp/jdk.tgz https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz && \
+RUN curl -L --output /tmp/jdk.tgz "https://api.adoptium.net/v3/binary/latest/25/ga/linux/x64/jdk/hotspot/normal/eclipse" && \
     mkdir -p "$JAVA_HOME" && \
     tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
     rm -rf /tmp/jdk.tgz \
