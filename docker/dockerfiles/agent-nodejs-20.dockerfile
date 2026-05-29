@@ -2,7 +2,7 @@ ARG BASE_IMAGE=debian:12-slim
 FROM ${BASE_IMAGE} AS common
 LABEL author=jonathan.rubiero@exense.ch
 # Install required packages
-RUN apt -yqq update && apt install -yqq --no-install-recommends curl ca-certificates sudo wget unzip
+RUN apt -yqq update && apt install -yqq --no-install-recommends curl ca-certificates sudo wget unzip && apt install --only-upgrade -yqq libgcrypt20 libgnutls30
 # Install NVM and Nodejs in one RUN step to minimize layers
 ENV NVM_DIR=/usr/local/nvm
 ENV NODE_VERSION=24.14.0
