@@ -17,6 +17,7 @@ RUN apt -yqq update && \
         locales \
         ghostscript=10.0.0~dfsg-11+deb12u8 \
         postgresql-client && \
+    apt install --only-upgrade -yqq libgcrypt20 libgnutls30 && \
     rm -rf /var/lib/apt/lists/*
 # Configure locales
 RUN sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen && \
