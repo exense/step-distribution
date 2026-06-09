@@ -134,7 +134,7 @@
               "CONFIG": "controller.dockerfile",
               "IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-21",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim --target java-21"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
@@ -143,7 +143,7 @@
               "CONFIG": "controller.dockerfile",
               "IMAGE_BASENAME": "step-controller-${BRANCH}-${ENVIRONMENT}-java-25",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-25"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim --target java-25"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -152,7 +152,7 @@
               "CONFIG": "controller.dockerfile",
               "IMAGE_BASENAME": "step-controller-${VERSION}-java-21",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-21"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim --target java-21"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -161,7 +161,7 @@
               "CONFIG": "controller.dockerfile",
               "IMAGE_BASENAME": "step-controller-${VERSION}-java-25",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --target java-25"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim --target java-25"
             },
             {
               "DEACTIVATED": "PRODUCTION",
@@ -170,7 +170,7 @@
               "CONFIG": "agent.dockerfile",
               "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-21",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,PRODUCTION",
@@ -179,7 +179,7 @@
               "CONFIG": "agent.dockerfile",
               "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-java-25",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -188,7 +188,7 @@
               "CONFIG": "agent.dockerfile",
               "IMAGE_BASENAME": "step-agent-${VERSION}-java-21",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -197,7 +197,7 @@
               "CONFIG": "agent.dockerfile",
               "IMAGE_BASENAME": "step-agent-${VERSION}-java-25",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             },
             {
               "DEACTIVATED": "PRODUCTION",
@@ -206,7 +206,7 @@
               "CONFIG": "agent-nodejs-20.dockerfile",
               "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-nodejs-20",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -215,7 +215,7 @@
               "CONFIG": "agent-nodejs-20.dockerfile",
               "IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:13-slim"
             }
           ]
         }
