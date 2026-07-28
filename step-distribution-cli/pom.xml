@@ -20,6 +20,13 @@
       <artifactId>step-cli-launcher</artifactId>
       <version>${step-backend.version}</version>
     </dependency>
+    <!-- TODO: use correct app for CLI/IDE -->
+    <dependency>
+      <groupId>ch.exense.step.frontend</groupId>
+      <artifactId>step-app</artifactId>
+      <version>${step-frontend.version}</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>
