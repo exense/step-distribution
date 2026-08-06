@@ -40,12 +40,6 @@
             },
             {
               "DEACTIVATED": "PRODUCTION",
-              "ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
-              "RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/",
-              "RAW_ASSET1": "step-ide-${SIMPLIFIED_BRANCH_NAME}.zip"
-            },
-            {
-              "DEACTIVATED": "PRODUCTION",
               "ORIGIN": "step-distribution-cli/target/step",
               "RAW_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/",
               "RAW_ASSET1": "step"
@@ -67,12 +61,6 @@
               "ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
               "RAW_DIRECTORY": "/step/${VERSION}/",
               "RAW_ASSET1": "step-agent-${VERSION}.zip"
-            },
-            {
-              "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
-              "ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
-              "RAW_DIRECTORY": "/step/${VERSION}/",
-              "RAW_ASSET1": "step-ide-${VERSION}.zip"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
@@ -98,10 +86,6 @@
             {
               "ORIGIN": "step-distribution-agent/target/step-agent-${VERSION}.zip",
               "DESTINATION": "step-agent-${VERSION}.zip"
-            },
-            {
-              "ORIGIN": "step-distribution-ide/target/step-ide-${VERSION}.zip",
-              "DESTINATION": "step-ide-${VERSION}.zip"
             },
             {
               "ORIGIN": "step-distribution-cli/target/step",
