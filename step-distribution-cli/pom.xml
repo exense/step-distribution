@@ -29,6 +29,8 @@
   </dependencies>
 
   <build>
+    <!-- The name the CLI is shipped under, and the name the executables below are built from -->
+    <finalName>step</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -70,7 +72,6 @@
             </goals>
             <configuration>
               <executable>false</executable>
-              <finalName>step</finalName>
               <mainClass>step.cli.StepConsole</mainClass>
               <!--              <embeddedLaunchScript>${basedir}/startCli.sh</embeddedLaunchScript>-->
             </configuration>
