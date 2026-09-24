@@ -202,18 +202,18 @@
             {
               "DEACTIVATED": "PRODUCTION",
               "ORIGIN": "",
-              "DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-20",
-              "CONFIG": "agent-nodejs-20.dockerfile",
-              "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-nodejs-20",
+              "DESTINATION": "step/agent:${BRANCH}-${ENVIRONMENT}-nodejs-24",
+              "CONFIG": "agent-nodejs.dockerfile",
+              "IMAGE_BASENAME": "step-agent-${BRANCH}-${ENVIRONMENT}-nodejs-24",
               "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
               "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
             },
             {
               "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
               "ORIGIN": "",
-              "DESTINATION": "step/agent:${VERSION}-nodejs-20",
-              "CONFIG": "agent-nodejs-20.dockerfile",
-              "IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-20",
+              "DESTINATION": "step/agent:${VERSION}-nodejs-24",
+              "CONFIG": "agent-nodejs.dockerfile",
+              "IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-24",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
               "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
             }
