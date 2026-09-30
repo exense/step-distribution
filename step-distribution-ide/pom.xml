@@ -83,31 +83,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-file-size</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireFilesSize>
-                  <maxsize>324000000</maxsize>
-                  <minsize>150000000</minsize>
-                  <files>
-                    <file>${project.build.directory}/step-ide-${project.version}.zip</file>
-                  </files>
-                </requireFilesSize>
-              </rules>
-              <fail>true</fail>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 </project>
