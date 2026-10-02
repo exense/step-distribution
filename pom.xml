@@ -80,7 +80,6 @@
     <module>step-groovy-libraries</module>
     <module>step-javascript-libraries</module>
     <module>step-distribution-controller</module>
-    <module>step-distribution-ide</module>
     <module>step-distribution-cli</module>
   </modules>
 
@@ -120,7 +119,9 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>2.7.18</version>
+          <!-- 3.2 and above are required: their loader registers a FileSystemProvider for the "nested" scheme, which
+               is what lets Jetty mount the web application packaged as a nested jar of the CLI -->
+          <version>3.5.16</version>
         </plugin>
         <plugin>
           <groupId>com.akathist.maven.plugins.launch4j</groupId>

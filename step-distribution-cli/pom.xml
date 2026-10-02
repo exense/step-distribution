@@ -20,9 +20,17 @@
       <artifactId>step-cli-launcher</artifactId>
       <version>${step-backend.version}</version>
     </dependency>
+    <dependency>
+      <groupId>ch.exense.step.frontend</groupId>
+      <artifactId>step-ide</artifactId>
+      <version>${step-frontend.version}</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>
+    <!-- The name the CLI is shipped under, and the name the executables below are built from -->
+    <finalName>step</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -64,7 +72,6 @@
             </goals>
             <configuration>
               <executable>false</executable>
-              <finalName>step</finalName>
               <mainClass>step.cli.StepConsole</mainClass>
               <!--              <embeddedLaunchScript>${basedir}/startCli.sh</embeddedLaunchScript>-->
             </configuration>
