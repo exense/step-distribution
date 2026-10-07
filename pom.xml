@@ -45,6 +45,9 @@
     <repository>
       <id>exense-oss</id>
       <url>https://repository.exense.ch/maven-oss/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
     </repository>
     <!-- private nexus -->
     <repository>
