@@ -217,7 +217,7 @@
               "CONFIG": "cli.dockerfile",
               "IMAGE_BASENAME": "step-cli-${VERSION}",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
-              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --build-arg NEXUS_HOST=nexus-enterprise-staging.stepcloud-test.ch --build-arg CLI_VERSION=${VERSION}"
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --build-arg NEXUS_HOST=nexus-enterprise.exense.ch --build-arg CLI_VERSION=${VERSION}"
             }
           ]
         }
