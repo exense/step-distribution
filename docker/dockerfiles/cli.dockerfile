@@ -23,7 +23,7 @@ ENV CLI_PATH=/usr/local/bin/step
 # NEXUS_HOST is given as a build-arg, keeping default here for local builds
 ARG NEXUS_HOST=nexus-enterprise-staging.stepcloud-test.ch
 # Download the CLI
-RUN curl -fsSL -u "delivery:100%FTPonly" -o ${CLI_PATH} https://${NEXUS_HOST}/repository/distribution/step/${CLI_VERSION}/step && \
+RUN curl -fsSL -u "delivery:100%FTPonly" -o ${CLI_PATH} "https://${NEXUS_HOST}/repository/distribution/step/${CLI_VERSION}/step" && \
     chmod +x ${CLI_PATH}
 # Create step user
 RUN useradd -s /bin/bash -m -U -u 1000 step
