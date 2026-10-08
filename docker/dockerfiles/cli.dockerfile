@@ -16,7 +16,7 @@ ENV JAVA_HOME=/usr/java/jdk-21
 RUN curl -L --output /tmp/jdk.tgz "https://api.adoptium.net/v3/binary/latest/21/ga/linux/x64/jdk/hotspot/normal/eclipse" && \
     mkdir -p "$JAVA_HOME" && \
     tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
-    rm -rf /tmp/jdk.tgz \
+    rm -rf /tmp/jdk.tgz
 # CLI_VERSION is given as a build-arg, keeping default here for local builds
 ARG CLI_VERSION=master-DEVELOPMENT
 ENV CLI_PATH=/usr/local/bin/step
