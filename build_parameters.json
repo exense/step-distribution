@@ -200,6 +200,24 @@
               "IMAGE_BASENAME": "step-agent-${VERSION}-nodejs-24",
               "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
               "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim"
+            },
+            {
+              "DEACTIVATED": "PRODUCTION",
+              "ORIGIN": "",
+              "DESTINATION": "step/cli:${BRANCH}-${ENVIRONMENT}",
+              "CONFIG": "cli.dockerfile",
+              "IMAGE_BASENAME": "step-cli-${BRANCH}-${ENVIRONMENT}",
+              "SBOM_DIRECTORY": "/step/${SIMPLIFIED_BRANCH_NAME}-${ENVIRONMENT}/sbom/",
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --build-arg NEXUS_HOST=nexus-enterprise-staging.stepcloud-test.ch --build-arg CLI_VERSION=${BRANCH}-${ENVIRONMENT} --secret id=nexus_auth,env=NEXUS_AUTH"
+            },
+            {
+              "DEACTIVATED": "DEVELOPMENT,INTEGRATION",
+              "ORIGIN": "",
+              "DESTINATION": "step/cli:${VERSION}",
+              "CONFIG": "cli.dockerfile",
+              "IMAGE_BASENAME": "step-cli-${VERSION}",
+              "SBOM_DIRECTORY": "/step/${VERSION}/sbom/",
+              "DOCKER_BUILD_ARGS": "--build-arg BASE_IMAGE=debian:12-slim --build-arg NEXUS_HOST=nexus-enterprise.exense.ch --build-arg CLI_VERSION=${VERSION} --secret id=nexus_auth,env=NEXUS_AUTH"
             }
           ]
         }
