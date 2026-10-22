@@ -8,7 +8,6 @@
   <version>0.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <!-- required metadata for maven central -->
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Step: the first open-source automation platform for unified agile testing</description>
   <url>https://github.com/exense/step</url>
@@ -42,6 +41,14 @@
       <id>nexus-staging</id>
       <url>https://nexus-enterprise-staging.stepcloud-test.ch/repository/staging-maven/</url>
     </repository>
+    <!-- production public nexus OSS -->
+    <repository>
+      <id>exense-oss</id>
+      <url>https://repository.exense.ch/maven-oss/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
     <!-- private nexus -->
     <repository>
       <id>nexus-exense</id>
@@ -58,7 +65,6 @@
     <!-- Exense projects -->
     <step-backend.version>0.0.0-SNAPSHOT</step-backend.version>
     <step-frontend.version>0.0.0</step-frontend.version>
-    <groovy.version>5.0.4</groovy.version>
   </properties>
 
 
@@ -80,7 +86,6 @@
     <module>step-groovy-libraries</module>
     <module>step-javascript-libraries</module>
     <module>step-distribution-controller</module>
-    <module>step-distribution-ide</module>
     <module>step-distribution-cli</module>
   </modules>
 
@@ -120,7 +125,9 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>2.7.18</version>
+          <!-- 3.2 and above are required: their loader registers a FileSystemProvider for the "nested" scheme, which
+               is what lets Jetty mount the web application packaged as a nested jar of the CLI -->
+          <version>3.5.16</version>
         </plugin>
         <plugin>
           <groupId>com.akathist.maven.plugins.launch4j</groupId>

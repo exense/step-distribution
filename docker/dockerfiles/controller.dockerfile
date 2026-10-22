@@ -85,7 +85,7 @@ ENV JAVA_HOME=/usr/java/jdk-25
 RUN curl -L --output /tmp/jdk.tgz "https://api.adoptium.net/v3/binary/latest/25/ga/linux/x64/jdk/hotspot/normal/eclipse" && \
     mkdir -p "$JAVA_HOME" && \
     tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1 && \
-    rm -rf /tmp/jdk.tgz \
+    rm -rf /tmp/jdk.tgz
 # Switch to regular user
 USER 1000
 # Update path
