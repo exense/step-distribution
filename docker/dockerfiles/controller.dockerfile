@@ -15,7 +15,6 @@ RUN apt -yqq update && \
         dnsutils \
         stoken \
         locales \
-        ghostscript=10.05.1~dfsg-1+deb13u3 \
         postgresql-client && \
     apt install --only-upgrade -yqq libgcrypt20 libgnutls30 && \
     rm -rf /var/lib/apt/lists/*
