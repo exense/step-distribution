@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=debian:12-slim
+ARG BASE_IMAGE=debian:13-slim
 FROM ${BASE_IMAGE} AS common
 LABEL author=jonathan.rubiero@exense.ch
 # Install required packages
@@ -15,7 +15,6 @@ RUN apt -yqq update && \
         dnsutils \
         stoken \
         locales \
-        ghostscript=10.0.0~dfsg-11+deb12u8 \
         postgresql-client && \
     apt install --only-upgrade -yqq libgcrypt20 libgnutls30 && \
     rm -rf /var/lib/apt/lists/*
