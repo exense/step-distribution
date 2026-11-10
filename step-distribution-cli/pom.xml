@@ -62,6 +62,22 @@
           </execution>
         </executions>
       </plugin>
+      <!--
+        The CLI calls functions of Windows through JNA (see WindowsConsoleStreams), which the JVMs from Java 24 on warn
+        about unless allowed. The manifest allows it, the jar being run with java -jar by both the step script and the
+        step.exe executable. The spring-boot-maven-plugin keeps the manifest of the jar it repackages.
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Enable-Native-Access>ALL-UNNAMED</Enable-Native-Access>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
